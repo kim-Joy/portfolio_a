@@ -1,0 +1,42 @@
+body {
+  position: relative;
+  font: {
+  family: 'Pretendard', '맑은 고딕','돋움', '-apple-system', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo';
+  weight: 400;
+  size: 16px;
+  }
+}
+
+
+/* =========================================== 
+  layout
+=========================================== */
+.container {display: grid; grid-template-rows: 50px 1fr; }
+
+/* =========================================== 
+  Header
+=========================================== */
+.Header {padding: 0 15px; box-sizing: border-box; line-height: 50px; background-color: $black;}
+.header--inner {display: flex; flex-wrap: wrap; justify-content: space-between; }
+
+.date--time {color: $white; font-size: 12px; }
+.date-mmdd {color: $white; font-size: 12px; }
+
+.header--right {display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; gap: 0 4px; }
+.header__antenna {margin-top: 10px;}
+.antenna {
+  display: flex; flex-direction: row;
+  margin: 1px 0;
+	border: 4px solid transparent;
+	border-top-color: $white;
+	border-radius: 50%;
+	border-style: solid;
+}
+.antenna1 {border-top-color: $black_2e2e; }
+
+.header__battery__percent {color: $white; font-size: 12px; }
+.header__battery {position: relative; display: flex; width: 40px; height: 20px; border: 1px solid $white; border-radius: 5px; background-color: $gray_8080; overflow: hidden; }
+.header__battery:after {content: ''; position: absolute; top: 0; left: 0; z-index:1; width: 90%; height: 100%; background-color: $white; }
+.header__batteryPower__percent {display: none; align-self: center; width: 100%; z-index: 2; text-align: center; color: $black; line-height: normal; color: $black; font-size: 12px; font-weight: 900; opacity: 0.5;}
+
+

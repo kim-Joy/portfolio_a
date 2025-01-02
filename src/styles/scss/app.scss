@@ -1,0 +1,297 @@
+.app--list--group {
+  display: grid;  
+  grid-template-columns: repeat(auto-fill, minmax(80px, 180px));
+  justify-content: center;
+  gap: 24px 24px;
+  > li {
+    display: grid;
+    justify-content: flex-start;
+    gap: 8px 4px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+  /* 아이콘 그룹 */
+  .app--group {
+    grid-template-columns: repeat(2, 1fr);
+    aspect-ratio: 1 / 1;
+    background-color: $black_2e2e;
+    padding: 8px 0px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    .app__btn__bgColor {
+      width: 60px; height: 60px; 
+    }
+    .app__btn__name {font-size: 11px; }
+  }
+}
+
+/* 기본 앱 아이콘 
+================================ */
+.app__btn {
+  display: flex; flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px 4px;
+  .app__btn__bgColor {
+    width: 80px; height: 80px;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: $gray_8080;
+  }
+  .app__btn__icon {
+    display: block; 
+    width: 100%; height: 100%;
+  }
+  .app__btn__name {color: $white; font: {
+    family: 'Pretendard', '맑은 고딕','돋움', '-apple-system', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo';
+    weight: 400;
+    size: 12px;
+  }
+  }
+}
+
+
+
+/* 아이콘 이미지 
+================================ */
+.app__btn {
+  &__my {
+    .app__btn__bgColor {
+      background: {
+        color: $black;
+        image: url($url + "my_gradientBg.png"), url($url + "my_gradientBg02.png"), url($url + "my_gradientBg03.png");
+        repeat: no-repeat;
+        position: bottom left, top right, top right -80px;
+        size: 100% auto , auto 100%, auto 100%;
+      };
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "my_memoji.png");
+        repeat: no-repeat;
+        position: center center;
+        size: 100px auto;
+      };
+    }
+  }
+  &__calc {
+    .app__btn__bgColor {
+      background-color: $gray_D4D4;
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "calc.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 36px auto;
+      };
+    }
+  }
+  &__todo {
+    .app__btn__bgColor {background-color: $white; border: 1px solid $gray_E6E6; }
+    .app__btn__icon {
+      background: {
+        image: url($url + "todo.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 34px auto;
+      };
+    }
+  }
+  &__facetime {
+    .app__btn__bgColor {
+    background: linear-gradient(0deg, #11C12E,  #5DF777);
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "face_time.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 46px auto;
+      };
+    }
+  }
+  &__book {
+    .app__btn__bgColor {
+    background: linear-gradient(0deg, #FA691D,  #FEA801);
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "book.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 32px auto;
+      };
+    }
+  }
+  &__editodo {
+    .app__btn__bgColor {
+    background-color: $white;
+    border: 1px solid #5AC1CC;
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "editodo.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 46px auto;
+      };
+    }
+  }
+  &__dubuck {
+    .app__btn__bgColor {
+    background-color: #fa7d38;
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "dubuck.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 46px auto;
+      };
+    }
+  }
+  &__maill {
+    .app__btn__bgColor {
+      background: linear-gradient(0deg, #1AC1FB,  #1D75F2);
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "mail.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 54px auto;
+      };
+    }
+  }
+  &__memo {
+    .app__btn__bgColor {
+      background-color: $white;
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "memo.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 100% auto;
+      };
+    }
+  }
+}
+
+
+/* 스택 1단 
+================================ */
+.app__btn {
+  &.stack {
+    .app__btn__bgColor {
+      width: 180px; height: 180px;
+    }
+  }
+}
+
+/* 스택 스와이프 
+.app--stack {overflow: hidden; }
+.stack--list--swiper {
+  position: relative;
+  .stack--item {
+    width: 180px; height: 180px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: red;
+    span {color: white; }
+  }
+}
+.vertical-swiper .slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f2f2f2;
+  font-size: 1.5rem;
+  color: #333;
+}*/
+
+/* 스킬 영역
+================================ */
+.skill--list-group {
+  display: grid; 
+  grid-template-columns: 60px 60px;
+  gap: 4px 8px;
+  width: 180px; height: 180px;
+  border-radius: 15px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  background-color: $black_2e2e;
+  overflow: hidden;
+  > li {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .skill__name {display: block; margin-top: 2px; font-size: 11px; color: $white; text-align: center; }
+}
+.skill__icon {
+  display: block;
+  width: 60px; height: 60px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  &.skill__html {
+    background : {
+      color: #F46938; 
+      image: url($url + "skill_html.svg");
+      size: 30px auto;
+    }
+  }
+}
+
+/*
+
+.stack--item {
+  &.skill--html {
+    background: {
+      color: #F46938; 
+      image: url($url + "skill_html.svg");
+      repeat: no-repeat;
+      position: center center;
+      size: 30px auto;
+    };
+  }
+  .skill--name {font-size: 12px; color: white; }
+}
+
+ skill_icon 
+
+.skill_icon.skill_icon_css {
+  background-color: #16A1DC;
+  background-image: url('/src/assets/images/icon/skill_css.svg')
+}
+.skill_icon.skill_icon_js {
+  background-color: #FFDE24;
+  background-image: url('/src/assets/images/icon/skill_js.svg')
+}
+.skill_icon.skill_icon_react {
+  background-color: #7DDFFF;
+  background-size: 70%;
+  background-image: url('/src/assets/images/icon/skill_react.svg')
+}
+.skill_icon.skill_icon_figma {
+  background-color: var(--complementary);
+  background-image: url("/src/assets/images/icon/skill_figma.svg"); 
+}
+.skill_icon.skill_icon_ai {
+  background-color: #F58C00;
+  background-image: url('/src/assets/images/icon/skill_ai.svg')
+}
+.skill_icon.skill_icon_ps {
+  background-color: #2B9ADD;
+  background-image: url('/src/assets/images/icon/skill_ps.svg')
+}
+.skill_icon.skill_icon_github {
+  position: relative; 
+  background-color: var(--complementary);
+
+}*/

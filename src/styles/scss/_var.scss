@@ -1,0 +1,53 @@
+
+$white : #FFFFFF;
+$black : #171717;
+
+$black_2e2e : #2E2E2E;
+$gray_8080 : #808080;
+$gray_D4D4 : #D4D4D2;
+$gray_E6E6 : #E6E6E6;
+
+$green_72DE : #72DE2F;
+$blue_067E: #067EFF;
+
+$url : "/assets/images/";
+
+/*  공통 
+==================================== */
+.visuallyhidden {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  margin: -1px; 
+  clip-path: polygon(0 0, 0 0, 0 0);
+  clip-path: inset(50%); 
+  clip: rect(0, 0, 0, 0); 
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+
+
+
+
+  /*  이미지 
+==================================== */
+@mixin image($url :null, $position: center center, $size : contain) {
+  background-image: $url;
+  background-position: $position;
+  background-size: $size;
+  background-repeat: no-repeat; 
+}
+@mixin mask (
+  $mask_url:null, 
+  $mask_position: center, 
+  $mask_size: contain
+  ){
+  -webkit-mask-image: $mask_url; 
+  mask-image: $mask_url; 
+  -webkit-mask-repeat: no-repeat; 
+  mask-repeat: no-repeat; 
+  -webkit-mask-position: $mask_position; 
+  mask-position: $mask_position; 
+  -webkit-mask-size: $mask_size; 
+  mask-size: $mask_size;
+}

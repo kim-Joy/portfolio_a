@@ -1,0 +1,50 @@
+.FaceId {
+  position: fixed; 
+  top: 0; left: 0; z-index: 5; 
+  width: 100%; height: 100%;
+  opacity: 1;
+}
+.face {
+  position: absolute; 
+  top: 20px; left: 50%; z-index: 10; margin-left: -60px; 
+  max-width: 120px; max-height: 120px;
+  width: 100%; height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
+  border: 1px solid $blue_067E; 
+  box-sizing: border-box; 
+  animation: rotate_image 3s forwards;
+  transform-origin: 50% 50%;
+  background: {
+    image: url($url + "face_check.svg");
+    repeat: no-repeat;
+    position: center center;
+    size: 60px auto;
+  }
+}
+
+.dim {position: absolute; top: 0; left: 0; z-index: 6; width: 100%; height:100%; background-color: rgba(0,0,0,0.08);backdrop-filter: blur(2px); }
+
+
+@keyframes rotate_image {
+  0% {
+    transform: rotate(0deg) scale(1); 
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(0deg) scale(0.5);
+    opacity: 0.5; border:none;
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    opacity: 0.8;
+  }
+  75% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0deg) scale(1); 
+    opacity: 1;
+  }
+}
