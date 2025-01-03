@@ -1,0 +1,41 @@
+<svg width="343" height="348" viewBox="0 0 343 348" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_313_160" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="343" height="348">
+<path d="M0 79C0 35.3695 35.3695 0 79 0H263C307.183 0 343 35.8172 343 80V262C343 309.496 304.496 348 257 348H86C38.5035 348 0 309.496 0 262V79Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_313_160)">
+<rect x="-11" y="-19" width="371" height="106" fill="url(#paint0_linear_313_160)"/>
+<line x1="-14" y1="172.5" x2="350" y2="172.5" stroke="#CCCCCC" stroke-width="3"/>
+<line x1="-14" y1="258.5" x2="350" y2="258.5" stroke="#CCCCCC" stroke-width="3"/>
+<circle cx="13.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="28.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="42.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="56.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="70.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="84.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="99.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="113.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="127.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="141.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="155.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="171.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="185.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="199.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="213.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="227.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="243.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="257.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="271.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="285.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="299.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="315.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="329.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="343.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+<circle cx="-0.5" cy="104.5" r="3.5" fill="#D9D9D9"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_313_160" x1="152.5" y1="-19" x2="156.5" y2="87" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFDE59"/>
+<stop offset="1" stop-color="#FECE0A"/>
+</linearGradient>
+</defs>
+</svg>
