@@ -1,0 +1,49 @@
+.kakaobank {}
+
+.kakaobank__symbolon {display: block; width: 40px; margin: 0 auto; padding: 60px 0;box-sizing: border-box; }
+.pattern--error-group {
+  text-align: center; 
+  .error__text {
+    font-size: 14px; font-weight: 400;
+    color: $black;
+  }
+  .error__destructive {
+    display: inline-block;
+    color: $destructive;
+    font-size: 12px; font-weight: 300;
+  }
+  .pattern--error__num {
+    display: inline-block;
+    margin-left: 4px;
+    color: $destructive;
+    font-size: 12px; font-weight: 300;
+    vertical-align: middle;
+
+  }
+}
+.pattern--num--list {
+  display: grid; grid-template-columns: repeat(3, 100px);
+  justify-items: center;
+  justify-content: center;
+}
+.pattern__number {
+  position: relative;
+  width: 80px; height: 80px; 
+  &:after {
+    content: '';
+    position: absolute; 
+    top: 50%; left: 50%;
+    width: 10px; height: 10px;
+    border-radius: 100%; background-color: $black; 
+    transform: translate(-50%, -50%);
+  }
+  &:hover, 
+  &.active {
+    &:after {
+    background-color: $white;
+    }
+  }
+}
+
+
+

@@ -5,7 +5,6 @@ function Calc() {
   return (
     <div className="Calc">
       계산깈!
-      <Header />
     </div>
 
   )

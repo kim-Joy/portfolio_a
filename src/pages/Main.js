@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Header from 'components/Header';
 import App from 'components/App';
 import StackApp from 'components/StackApp';
 import FaceId from 'components/FaceId';
+
 
 function Main() {
   const navigate = useNavigate();
   const handleCalc = () => navigate('/Calc');
   const handleMy = () => navigate('/My');
-  const handleMail = () => navigate('/Mail')
+  const handleMail = () => navigate('/Mail');
+  const handleKakaobank = () => navigate('/KakaoBank')
   const handleEditodo = () => {
     window.open('https://kim-joy.github.io/editodo/', '_blank')
   };
@@ -34,9 +35,7 @@ function Main() {
   }, []);
 
   return (
-    <div className="container">
-      <Header />
-      <main className="Main">
+      <div className="Main">
         <ul className="app--list--group">
           <li>
             <App  
@@ -100,15 +99,19 @@ function Main() {
               className="canvas"
               name="그림판"
             />
+            <App  
+              className="kakaobank"
+              onClick={handleKakaobank}
+              name="카카오뱅크"
+            />
           </li> 
           <li>
            
           </li>  
         </ul> 
-      </main>
 
-      {showFaceId &&  <FaceId /> }
-    </div>
+        {showFaceId &&  <FaceId /> }
+      </div>
 
   )
 } 

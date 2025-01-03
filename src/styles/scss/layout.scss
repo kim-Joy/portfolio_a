@@ -11,16 +11,32 @@ body {
 /* =========================================== 
   layout
 =========================================== */
-.container {display: grid; grid-template-rows: 50px 1fr; }
+.Layout {display: grid; grid-template-rows: 50px 1fr; }
+
+main {height: calc(100vh - 50px); padding: 0 15px; box-sizing: border-box; 
+}
+
+/* 배경색 */
+main {
+  &:has(.Main) {
+    background-color: $BgColor;
+  }
+  &:has(.kakaobank) {
+    $BgColor : #FFE300;
+    background-color: $BgColor; 
+  }
+}
+
 
 /* =========================================== 
   Header
 =========================================== */
-.Header {padding: 0 15px; box-sizing: border-box; line-height: 50px; background-color: $black;}
-.header--inner {display: flex; flex-wrap: wrap; justify-content: space-between; }
+.Header {padding: 0 15px; box-sizing: border-box; background-color: $BgColor; line-height: 50px;}
+.header--inner {display: flex; flex-wrap: wrap; justify-content: space-between; color: $white;}
 
-.date--time {color: $white; font-size: 12px; }
-.date-mmdd {color: $white; font-size: 12px; }
+
+.date--time {color: inherit; font-size: 12px; }
+.date-mmdd {color: inherit; font-size: 12px; }
 
 .header--right {display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; gap: 0 4px; }
 .header__antenna {margin-top: 10px;}

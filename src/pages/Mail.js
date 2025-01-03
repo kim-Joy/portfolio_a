@@ -23,7 +23,6 @@ const Mail = () => {
 
   return (
     <div className="Mail">
-      <Header />
       <form>
         <input 
           type="text"

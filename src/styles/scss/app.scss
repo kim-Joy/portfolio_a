@@ -43,11 +43,11 @@
     display: block; 
     width: 100%; height: 100%;
   }
-  .app__btn__name {color: $white; font: {
-    family: 'Pretendard', '맑은 고딕','돋움', '-apple-system', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo';
-    weight: 400;
-    size: 12px;
-  }
+  .app__btn__name {color: $white;
+    font: {
+      weight: 300;
+      size: 12px;
+    }
   }
 }
 
@@ -175,6 +175,19 @@
         repeat: no-repeat;
         position: center center;
         size: 100% auto;
+      };
+    }
+  }
+  &__kakaobank {
+    .app__btn__bgColor {
+      background: #FFE300;
+    }
+    .app__btn__icon {
+      background: {
+        image: url($url + "kakaobank.svg");
+        repeat: no-repeat;
+        position: center center;
+        size: 32px auto;
       };
     }
   }
