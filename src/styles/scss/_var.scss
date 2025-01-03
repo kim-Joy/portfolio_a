@@ -44,23 +44,27 @@ $url : "/assets/images/";
 
   /*  이미지 
 ==================================== */
-@mixin image($url :null, $position: center center, $size : contain) {
-  background-image: $url;
+@mixin image($url: null, $position: center center, $size: contain) {
+  @if $url != null {
+    background-image: url(#{$url});
+  }
   background-position: $position;
   background-size: $size;
   background-repeat: no-repeat; 
 }
-@mixin mask (
-  $mask_url:null, 
-  $mask_position: center, 
+@mixin mask(
+  $mask_url: null,
+  $mask_position: center,
   $mask_size: contain
-  ){
-  -webkit-mask-image: $mask_url; 
-  mask-image: $mask_url; 
-  -webkit-mask-repeat: no-repeat; 
-  mask-repeat: no-repeat; 
-  -webkit-mask-position: $mask_position; 
-  mask-position: $mask_position; 
-  -webkit-mask-size: $mask_size; 
+) {
+  @if $mask_url != null {
+    -webkit-mask-image: url(#{$mask_url});
+    mask-image: url(#{$mask_url});
+  }
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: $mask_position;
+  mask-position: $mask_position;
+  -webkit-mask-size: $mask_size;
   mask-size: $mask_size;
 }

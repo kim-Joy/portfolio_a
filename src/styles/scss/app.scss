@@ -308,3 +308,13 @@
   background-color: var(--complementary);
 
 }*/
+
+
+
+@container main-container (max-width: 992px) { 
+ .app--list--group {
+  grid-template-columns: repeat(auto-fill, minmax(40px, 90px));
+  .app__btn .app__btn__bgColor {width: 40px; height: 40px; }
+  .app__btn.stack .app__btn__bgColor {width: 80px; height: 80px; }
+  }
+}

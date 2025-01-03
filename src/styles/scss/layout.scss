@@ -11,13 +11,23 @@ body {
 /* =========================================== 
   layout
 =========================================== */
-.Layout {display: grid; grid-template-rows: 50px 1fr; }
+.Layout {
+  display: grid; 
+  grid-template-rows: 50px 1fr;
+  height: 100vh;
 
-main {height: calc(100vh - 50px); padding: 0 15px; box-sizing: border-box; 
+ }
+
+main {
+  height: 100%;
+  padding: 0 15px; 
+  box-sizing: border-box;
+  > div {height: 100%; } 
 }
 
 /* 배경색 */
 main {
+  &:has(:not(.kakaobank)),
   &:has(.Main) {
     background-color: $BgColor;
   }
