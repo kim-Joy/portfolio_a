@@ -1,0 +1,41 @@
+<svg width="119" height="121" viewBox="0 0 119 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_313_160" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="120" height="121">
+<rect x="-0.00146484" width="119" height="120.735" fill="white"/>
+</mask>
+<g mask="url(#mask0_313_160)">
+<rect x="-3.81787" y="-6.59186" width="128.714" height="36.7755" fill="url(#paint0_linear_313_160)"/>
+<line x1="-4.8584" y1="58.8674" x2="121.427" y2="58.8674" stroke="#CCCCCC" stroke-width="3"/>
+<line x1="-4.8584" y1="88.7041" x2="121.427" y2="88.7041" stroke="#CCCCCC" stroke-width="3"/>
+<circle cx="4.68206" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="9.88616" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="14.7436" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="19.6005" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="24.4579" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="29.3149" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="34.519" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="39.3759" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="44.2333" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="49.0903" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="53.9477" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="59.4985" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="64.3559" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="69.2128" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="74.0698" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="78.9272" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="84.478" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="89.3354" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="94.1923" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="99.0497" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="103.907" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="109.458" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="114.315" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="119.172" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+<circle cx="-0.174874" cy="36.2551" r="1.21429" fill="#D9D9D9"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_313_160" x1="52.9066" y1="-6.59186" x2="54.2944" y2="30.1837" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFDE59"/>
+<stop offset="1" stop-color="#FECE0A"/>
+</linearGradient>
+</defs>
+</svg>

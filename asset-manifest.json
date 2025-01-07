@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio_a/static/css/main.9b590826.css",
-    "main.js": "/portfolio_a/static/js/main.c7786acb.js",
+    "main.css": "/portfolio_a/static/css/main.6f86e9d4.css",
+    "main.js": "/portfolio_a/static/js/main.3019aff6.js",
     "static/media/Pretendard-Thin.ttf": "/portfolio_a/static/media/Pretendard-Thin.23965237737042c7c087.ttf",
     "static/media/Pretendard-ExtraLight.ttf": "/portfolio_a/static/media/Pretendard-ExtraLight.3a1f8545bfb6498f1f14.ttf",
     "static/media/Pretendard-Light.ttf": "/portfolio_a/static/media/Pretendard-Light.be916151766e60d80835.ttf",
@@ -30,26 +30,30 @@
     "static/media/Pretendard-Light.woff2": "/portfolio_a/static/media/Pretendard-Light.1fc5521353ec20635e8e.woff2",
     "static/media/Pretendard-ExtraLight.woff2": "/portfolio_a/static/media/Pretendard-ExtraLight.6a3dddfd84c05761ef44.woff2",
     "static/media/Pretendard-Thin.woff2": "/portfolio_a/static/media/Pretendard-Thin.bb7cedf4446fa24dda9d.woff2",
+    "static/media/my_b.png": "/portfolio_a/static/media/my_b.68824660fdc11a44b882.png",
     "static/media/my_memoji.png": "/portfolio_a/static/media/my_memoji.1c058d3e0875ec3a3d15.png",
+    "static/media/my_a.png": "/portfolio_a/static/media/my_a.d3ed83427b9b1dcc4df3.png",
     "static/media/my_gradientBg03.png": "/portfolio_a/static/media/my_gradientBg03.033672cf9ea2c8290ebc.png",
     "static/media/my_gradientBg.png": "/portfolio_a/static/media/my_gradientBg.7a0969d5e6a85f17c9ef.png",
-    "static/media/editodo.svg": "/portfolio_a/static/media/editodo.de8044c2c22a19d5b52a.svg",
-    "static/media/dubuck.svg": "/portfolio_a/static/media/dubuck.e091cb4a5f6351c9cbb7.svg",
-    "static/media/memo.svg": "/portfolio_a/static/media/memo.d29dcd3bba5357d1ed67.svg",
-    "static/media/mail.svg": "/portfolio_a/static/media/mail.eeba26c14729ac07d883.svg",
+    "static/media/editodo.svg": "/portfolio_a/static/media/editodo.69178bb4d2c1c50b1f7b.svg",
+    "static/media/dubuck.svg": "/portfolio_a/static/media/dubuck.d8a5429abf264e27d484.svg",
+    "static/media/memo.svg": "/portfolio_a/static/media/memo.35fdba1057ca8bc52d35.svg",
+    "static/media/mail.svg": "/portfolio_a/static/media/mail.b74ffe876a9b19c94cef.svg",
     "static/media/face_check.svg": "/portfolio_a/static/media/face_check.09d0b9cab50df5ef3e53.svg",
-    "static/media/book.svg": "/portfolio_a/static/media/book.edcb52933b2902980d00.svg",
-    "static/media/todo.svg": "/portfolio_a/static/media/todo.4ff6a8a4d1b8fb5092f0.svg",
+    "static/media/book.svg": "/portfolio_a/static/media/book.ae92a1ff97619111cee5.svg",
+    "static/media/calc.svg": "/portfolio_a/static/media/calc.eadce47252ed9708a8de.svg",
     "index.html": "/portfolio_a/index.html",
-    "static/media/calc.svg": "/portfolio_a/static/media/calc.556b8aa1c7434681a646.svg",
-    "static/media/face_time.svg": "/portfolio_a/static/media/face_time.fc9f8c6574c5c9b762ee.svg",
-    "static/media/kakaobank.svg": "/portfolio_a/static/media/kakaobank.18d54aa5a5d376d8f7412ec36b5326e0.svg",
+    "static/media/todo.svg": "/portfolio_a/static/media/todo.4ff6a8a4d1b8fb5092f0.svg",
+    "static/media/facetime.svg": "/portfolio_a/static/media/facetime.6110098a0c708aed33bc.svg",
+    "static/media/kakaobank.svg": "/portfolio_a/static/media/kakaobank.70cdfdbb43427065e38405a5743d3202.svg",
     "static/media/skill_html.svg": "/portfolio_a/static/media/skill_html.a45fc65b2667def83742.svg",
-    "main.9b590826.css.map": "/portfolio_a/static/css/main.9b590826.css.map",
-    "main.c7786acb.js.map": "/portfolio_a/static/js/main.c7786acb.js.map"
+    "static/media/arrow_top.svg": "/portfolio_a/static/media/arrow_top.cc9cedfe179894e80f28.svg",
+    "static/media/dashed_dot.svg": "/portfolio_a/static/media/dashed_dot.251ff8092824360f921d.svg",
+    "main.6f86e9d4.css.map": "/portfolio_a/static/css/main.6f86e9d4.css.map",
+    "main.3019aff6.js.map": "/portfolio_a/static/js/main.3019aff6.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b590826.css",
-    "static/js/main.c7786acb.js"
+    "static/css/main.6f86e9d4.css",
+    "static/js/main.3019aff6.js"
   ]
 }
