@@ -37,9 +37,9 @@ function Main() {
   return (
       <div className="Main">
         <ul className="app--list--group">
-          <li>
+          <li className="widget">
             <App  
-              className="my stack"
+              className="my"
               onClick={handleMy}
               name="my"
             />
@@ -89,11 +89,12 @@ function Main() {
             <App  
               className="book"
               name="도서"
+            /><App  
+              className="book"
+              name="도서"
             />
           </li>
-          <li className="app--stack">
-            <StackApp />
-          </li> 
+          
           <li>
             <App  
               className="canvas"
@@ -105,9 +106,17 @@ function Main() {
               name="카카오뱅크"
             />
           </li> 
+          <li className="app--stack--group">
+            <StackApp />
+            <span className="stack--name">취미</span>
+          </li> 
           <li>
-           
+            <App  
+              className="skill"
+              name="Skill"
+            />
           </li>  
+          
         </ul> 
 
         {showFaceId &&  <FaceId /> }

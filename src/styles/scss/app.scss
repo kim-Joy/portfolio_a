@@ -1,38 +1,45 @@
+.Main {
+  container-type: inline-size;
+}
+
+/* app list
+===================================== */
 .app--list--group {
   display: grid;  
-  grid-template-columns: repeat(auto-fill, minmax(80px, 180px));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   justify-content: center;
+  align-content: space-between;
   gap: 24px 24px;
   > li {
     display: grid;
-    justify-content: flex-start;
-    gap: 8px 4px;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  }
-  /* 아이콘 그룹 */
-  .app--group {
-    grid-template-columns: repeat(2, 1fr);
-    aspect-ratio: 1 / 1;
-    background-color: $black_2e2e;
-    padding: 8px 0px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    .app__btn__bgColor {
-      width: 60px; height: 60px; 
+    justify-content: space-around;
+    gap: 8px 8px;
+    grid-template-columns: repeat(2, minmax(60px, 1fr));
+    &.widget { /* 위젯 */
+      grid-template-columns: repeat(1, minmax(80px, 1fr));
     }
-    .app__btn__name {font-size: 11px; }
-  }
+    &.app--group { /* 앱 묶음 */
+      grid-template-columns: repeat(3, minmax(50px, 1fr));
+      justify-content: space-evenly;
+      background-color: $black_2e2e;
+      padding: 8px;
+      border-radius: 15px;
+      box-sizing: border-box;
+      overflow: hidden;
+      .app__btn__bgColor {border-radius: 10px; }
+      .app__btn__name {font-size: 11px; }
+    }
+  }  
 }
 
-/* 기본 앱 아이콘 
-================================ */
+/* default */
 .app__btn {
   display: flex; flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   gap: 4px 4px;
   .app__btn__bgColor {
-    width: 80px; height: 80px;
+    width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 15px;
     box-sizing: border-box;
@@ -52,11 +59,10 @@
 }
 
 
-
-/* 아이콘 이미지 
+/* icon image 
 ================================ */
 .app__btn {
-  &__my {
+  &__my{
     .app__btn__bgColor {
       background: {
         color: $black;
@@ -67,12 +73,10 @@
       };
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "my_memoji.png");
-        repeat: no-repeat;
-        position: center center;
-        size: 100px auto;
-      };
+      @include image(
+        $url : "#{$url}my_memoji.png",
+        $size: 68% auto,
+      );
     }
   }
   &__calc {
@@ -80,76 +84,69 @@
       background-color: $gray_D4D4;
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "calc.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 36px auto;
-      };
+      @include image(
+        $url : "#{$url}calc.svg",
+        $size: auto 80%,
+      );
     }
   }
   &__todo {
-    .app__btn__bgColor {background-color: $white; border: 1px solid $gray_E6E6; }
+    .app__btn__bgColor {
+      background-color: $white; 
+      border: 1px solid $gray_E6E6;
+    }
     .app__btn__icon {
-      background: {
-        image: url($url + "todo.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 34px auto;
-      };
+      @include image(
+        $url : "#{$url}todo.svg",
+        $size: 80% auto,
+      );
     }
   }
   &__facetime {
     .app__btn__bgColor {
-    background: linear-gradient(0deg, #11C12E,  #5DF777);
+      background: linear-gradient(0deg, #11C12E,  #5DF777);
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "face_time.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 46px auto;
-      };
+      background-color: $white;
+      @include mask(
+        $mask_url : "#{$url}facetime.svg",
+        $mask_size: 80% auto,
+      );
     }
   }
   &__book {
     .app__btn__bgColor {
-    background: linear-gradient(0deg, #FA691D,  #FEA801);
+      background: linear-gradient(0deg, #FA691D,  #FEA801);
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "book.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 32px auto;
-      };
+      background-color: $white;
+      @include mask(
+        $mask_url : "#{$url}book.svg",
+        $mask_size: 80% auto,
+      );
     }
   }
   &__editodo {
     .app__btn__bgColor {
-    background-color: $white;
-    border: 1px solid #5AC1CC;
+      background-color: $white;
+      border: 1px solid #5AC1CC;
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "editodo.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 46px auto;
-      };
+      @include image(
+        $url : "#{$url}editodo.svg",
+        $size: 80% auto,
+      );
     }
   }
   &__dubuck {
     .app__btn__bgColor {
-    background-color: #fa7d38;
+      background-color: #fa7d38;
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "dubuck.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 46px auto;
-      };
+      @include image(
+        $url : "#{$url}dubuck.svg",
+        $size: 80% auto,
+      );
     }
   }
   &__maill {
@@ -157,12 +154,11 @@
       background: linear-gradient(0deg, #1AC1FB,  #1D75F2);
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "mail.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 54px auto;
-      };
+      background-color: $white;
+      @include mask(
+        $mask_url : "#{$url}mail.svg",
+        $mask_size: 80% auto,
+      );
     }
   }
   &__memo {
@@ -170,61 +166,84 @@
       background-color: $white;
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "memo.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 100% auto;
-      };
+      @include image(
+        $url : "#{$url}memo.svg",
+        $size: 100% auto,
+      );
     }
   }
   &__kakaobank {
     .app__btn__bgColor {
-      background: #FFE300;
+      background-color: #FFE300;
     }
     .app__btn__icon {
-      background: {
-        image: url($url + "kakaobank.svg");
-        repeat: no-repeat;
-        position: center center;
-        size: 32px auto;
-      };
+      background-color: #1E1E1E;
+      @include mask(
+        $mask_url : "#{$url}kakaobank.svg",
+        $mask_size: auto 56%,
+      );
     }
   }
-}
-
-
-/* 스택 1단 
-================================ */
-.app__btn {
-  &.stack {
+  &__skill {
     .app__btn__bgColor {
-      width: 180px; height: 180px;
+      background-color: purple;
+    }
+    .app__btn__icon {
+      background-color: #1E1E1E;
+      @include mask(
+        $mask_url : "#{$url}kakaobank.svg",
+        $mask_size: auto 56%,
+      );
+    }
+  }
+  &__setting {
+    .app__btn__bgColor {
+      background-color: skyblue;
+    }
+    .app__btn__icon {
+      background-color: #1E1E1E;
+      @include mask(
+        $mask_url : "#{$url}kakaobank.svg",
+        $mask_size: auto 56%,
+      );
     }
   }
 }
 
-/* 스택 스와이프 
-.app--stack {overflow: hidden; }
-.stack--list--swiper {
-  position: relative;
-  .stack--item {
-    width: 180px; height: 180px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    background-color: red;
-    span {color: white; }
+
+
+/* 스택 
+================================ */
+.app--stack--group {
+  .stack--slider--wrapper {
+    grid-column: 1/3;
+    width: 100%; height: 100%;
+    max-height: 180px;
+  }
+  .stack--list--group {
+    grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+    .app--group {
+      width: 100%;
+      grid-template-columns: repeat(3, minmax(38px, 1fr));
+      .app__btn  {
+        border-radius: 5px;
+      }
+    }
+  }
+  .stack--name {
+    grid-column: 1 / 3;
+    font-size: 12px;
+    color: $white;
+    text-align: center;
   }
 }
-.vertical-swiper .slide-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background: #f2f2f2;
-  font-size: 1.5rem;
-  color: #333;
-}*/
+
+/* 스택 슬라이드  */
+.stack--list--group {
+  .app--stack--group { 
+   grid-template-columns: repeat(3, minmax(40px, 1fr));
+   }
+ }
 
 /* 스킬 영역
 ================================ */
@@ -232,7 +251,7 @@
   display: grid; 
   grid-template-columns: 60px 60px;
   gap: 4px 8px;
-  width: 180px; height: 180px;
+  max-height: 180px;
   border-radius: 15px;
   padding: 8px 8px;
   box-sizing: border-box;
@@ -309,12 +328,55 @@
 
 }*/
 
-
-
-@container main-container (max-width: 992px) { 
- .app--list--group {
-  grid-template-columns: repeat(auto-fill, minmax(40px, 90px));
-  .app__btn .app__btn__bgColor {width: 40px; height: 40px; }
-  .app__btn.stack .app__btn__bgColor {width: 80px; height: 80px; }
+/*
+.app--stack {overflow: hidden; }
+.stack--list--swiper {
+  position: relative;
+  .stack--item {
+    width: 180px; height: 180px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: red;
+    span {color: white; }
   }
 }
+.vertical-swiper .slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f2f2f2;
+  font-size: 1.5rem;
+  color: #333;
+}*/
+
+
+/* 스택 슬라이드 영역 
+.stack--list-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(68px, 1fr));
+  justify-content: space-around;
+  gap: 8px 8px;  
+  padding: 8px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: $black_2e2e;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  > li {
+
+  }
+}*/
+
+
+
+
+
+
+/* =======================================
+  media query
+==========================================*/
+
+@container  (max-width: 485px) {
+ 
+} //End

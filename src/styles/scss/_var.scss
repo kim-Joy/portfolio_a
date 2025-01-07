@@ -16,9 +16,15 @@ $gray_8080 : #808080;
 $gray_D4D4 : #D4D4D2;
 $gray_E6E6 : #E6E6E6;
 
+$line_2A2A : #2A2A2A;
+
 $green_72DE : #72DE2F;
 $blue_067E: #067EFF;
-
+$purple_D1CC : #D1CCFF;
+$purple_D6D3 : #D6D3FB;
+$purple_7779 : #7779E1;
+$purple_9D98 : #9D98FE;
+$purple_5E46 : #5E46E8;
 
 
 
@@ -44,18 +50,19 @@ $url : "/assets/images/";
 
   /*  이미지 
 ==================================== */
-@mixin image($url: null, $position: center center, $size: contain) {
+@mixin image($url: null, $position: center center, $size: contain, $repeat: no-repeat) {
   @if $url != null {
     background-image: url(#{$url});
   }
   background-position: $position;
   background-size: $size;
-  background-repeat: no-repeat; 
+  background-repeat: $repeat; 
 }
 @mixin mask(
   $mask_url: null,
   $mask_position: center,
-  $mask_size: contain
+  $mask_size: contain,
+  $mask_repeat: no-repeat
 ) {
   @if $mask_url != null {
     -webkit-mask-image: url(#{$mask_url});

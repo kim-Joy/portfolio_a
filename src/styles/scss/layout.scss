@@ -41,7 +41,13 @@ main {
 /* =========================================== 
   Header
 =========================================== */
-.Header {padding: 0 15px; box-sizing: border-box; background-color: $BgColor; line-height: 50px;}
+.Header {
+  padding: 0 15px; 
+  box-sizing: border-box; 
+  background-color: $BgColor; 
+  line-height: 50px;
+  container-type : inline-size;
+}
 .header--inner {display: flex; flex-wrap: wrap; justify-content: space-between; color: $white;}
 
 
@@ -61,8 +67,18 @@ main {
 .antenna1 {border-top-color: $black_2e2e; }
 
 .header__battery__percent {color: $white; font-size: 12px; }
-.header__battery {position: relative; display: flex; width: 40px; height: 20px; border: 1px solid $white; border-radius: 5px; background-color: $gray_8080; overflow: hidden; }
+.header__battery {position: relative; display: flex; width: 40px; height: 14px; border: 1px solid $white; border-radius: 5px; background-color: $gray_8080; overflow: hidden; }
 .header__battery:after {content: ''; position: absolute; top: 0; left: 0; z-index:1; width: 90%; height: 100%; background-color: $white; }
 .header__batteryPower__percent {display: none; align-self: center; width: 100%; z-index: 2; text-align: center; color: $black; line-height: normal; color: $black; font-size: 12px; font-weight: 900; opacity: 0.5;}
 
 
+
+
+/* =======================================
+  media query
+==========================================*/
+
+@container  (max-width: 485px) {
+  .date-mmdd,
+  .header__battery__percent {display: none;}
+}

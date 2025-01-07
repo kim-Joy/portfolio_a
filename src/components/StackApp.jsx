@@ -1,8 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules'; // Swiper 11에서는 이렇게 가져옵니다.
+import { Pagination } from 'swiper/modules'; 
+
+import App from 'components/App';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+
 
 function StackApp() {
   return (
@@ -12,32 +17,53 @@ function StackApp() {
       pagination={{ clickable: true }}
       spaceBetween={0}
       slidesPerView={1}
-      className="stack--list--swiper"
-      style={{ height: '180px' }}
+      className="stack--slider--wrapper"
     >
       <SwiperSlide>
-        <ul className="skill--list-group">
-          <li>
-            <i className="skill__icon skill__html"></i>
-            <span className="skill__name">HTML</span>
-          </li>
-          <li>
-            <i className="skill__icon skill__html"></i>
-            <span className="skill__name">CSS3</span>
-          </li>
-          <li>
-            <i className="skill__icon skill__html"></i>
-            <span className="skill__name">JavaScript</span>
+        <ul className="app--list--group stack--list--group">
+          <li className="app--group">
+            <App  
+                className="yogo"
+                name="요가"
+              />
+              <App  
+                className="tennis"
+                name="테니스"
+              />
+              <App  
+                className="mountain"
+                name="등산"
+              />
+              <App  
+                className="trip"
+                name="독서서"
+              />
+              <App  
+                className="knitting"
+                name="뜨개질"
+              />
+              <App  
+                className="diary"
+                name="다꾸"
+              />
           </li>
         </ul>
       </SwiperSlide>
       <SwiperSlide>
-        <ul className="skill--list-group">
-          <li className="skill__icon skill__html">
-            <span className="skill__name">HTML</span>
+        <ul className="app--list--group stack--list--group">
+          <li className="app--group">
+            <App  
+                className="blog"
+                name="블로그"
+              />
+              <App  
+                className="blog"
+                name="잠자기"
+              />
           </li>
         </ul>
       </SwiperSlide>
+      
     </Swiper>
   );
 }
