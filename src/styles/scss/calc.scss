@@ -1,0 +1,82 @@
+
+.calc--viewer {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .calc__input__value {
+    display: block;
+    width: 100%; height: 40px;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-align: right;
+    font-size: 30px; font-weight: 400;
+    color: $dominateColor;
+  }
+}
+
+.calc--dashbard {
+  display: grid;
+  gap: 4px 4px;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+  container-type: inline-size;
+  container-name: calc-container;
+}
+.calc__item {
+  &.operations {
+    grid-row: 3 / 1;
+    .calc__grid {
+      display: grid;
+      gap: 4px 4px;
+    }
+  }
+  &.num {
+    .calc__grid {
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px 4px;
+    }
+  }
+  &.formula {
+    order: 1;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    .calc__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px 4px;
+    }
+  }
+}
+.calc__btn {
+  display: block;
+  width: 68px;
+  border-radius: 100%; 
+  background-color: $black_2E2E;
+  color: $Color_white;
+  text-align: center;
+  font-size: 27px; font-weight: 500;
+  aspect-ratio: 1 / 1;
+  &.operations {
+    background-color: $orange_FF9F;
+  }
+  &.formula {
+    background-color: $gray_5C5C;
+  }
+}
+
+
+
+/* =======================================
+  media query
+==========================================*/
+@container calc-container (max-width: 300px) {
+  .calc__btn {
+    width: 58px;
+    font-size: 24px;
+  }
+}

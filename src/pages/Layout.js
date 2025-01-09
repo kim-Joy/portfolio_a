@@ -6,7 +6,7 @@ import Header from "components/Header";
 
 function Layout() {
   return (
-    <div className="Layout">
+    <div className="Layout light--mode">
       <Header />
       <main>
         <Outlet />

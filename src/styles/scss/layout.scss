@@ -29,11 +29,11 @@ main {
 main {
   &:has(:not(.kakaobank)),
   &:has(.Main) {
-    background-color: $BgColor;
+    background-color: $bgColor;
   }
   &:has(.kakaobank) {
-    $BgColor : #FFE300;
-    background-color: $BgColor; 
+    //background-color : #FFE300;
+    background-color: $bgColor; 
   }
 }
 
@@ -43,12 +43,13 @@ main {
 =========================================== */
 .Header {
   padding: 0 15px; 
-  box-sizing: border-box; 
-  background-color: $BgColor; 
+  box-sizing: border-box;
   line-height: 50px;
-  container-type : inline-size;
+  container-name: layout-container;
+  container-type: inline-size;
+  background-color: $bgColor;
 }
-.header--inner {display: flex; flex-wrap: wrap; justify-content: space-between; color: $white;}
+.header--inner {display: flex; flex-wrap: wrap; justify-content: space-between; color: $baseColor;}
 
 
 .date--time {color: inherit; font-size: 12px; }
@@ -60,16 +61,17 @@ main {
   display: flex; flex-direction: row;
   margin: 1px 0;
 	border: 4px solid transparent;
-	border-top-color: $white;
+	border-top-color: $dominateColor;
 	border-radius: 50%;
 	border-style: solid;
 }
-.antenna1 {border-top-color: $black_2e2e; }
+.antenna1 {border-top-color: $black_2E2E; }
 
-.header__battery__percent {color: $white; font-size: 12px; }
-.header__battery {position: relative; display: flex; width: 40px; height: 14px; border: 1px solid $white; border-radius: 5px; background-color: $gray_8080; overflow: hidden; }
-.header__battery:after {content: ''; position: absolute; top: 0; left: 0; z-index:1; width: 90%; height: 100%; background-color: $white; }
-.header__batteryPower__percent {display: none; align-self: center; width: 100%; z-index: 2; text-align: center; color: $black; line-height: normal; color: $black; font-size: 12px; font-weight: 900; opacity: 0.5;}
+.header__battery__percent {color: $dominateColor; font-size: 12px; }
+.header__battery {position: relative; display: flex; width: 40px; height: 14px; border: 1px solid $dominateColor; border-radius: 5px; background-color: $gray_8080; overflow: hidden; }
+.header__battery:after {content: ''; position: absolute; top: 0; left: 0; z-index:1; width: 90%; height: 100%; background-color: $dominateColor; }
+.header__batteryPower__percent {display: none; align-self: center; width: 100%; z-index: 2; text-align: center; line-height: normal; color: $light_txtColor_base; font-size: 12px; font-weight: 900; opacity: 0.5;}
+
 
 
 
@@ -78,7 +80,7 @@ main {
   media query
 ==========================================*/
 
-@container  (max-width: 485px) {
+@container layout-container (max-width: 485px) {
   .date-mmdd,
-  .header__battery__percent {display: none;}
+  .header__battery__percent {display: none; }
 }

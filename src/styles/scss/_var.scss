@@ -1,9 +1,3 @@
-
-$white : #FFFFFF;
-$black : #171717;
-
-$BgColor : #171717;
-
 /* STATUS */
 $positive: #00BF40; //긍정적, 진행, 성공 
 $cautionary: #FF9200; //주의 , 경고
@@ -11,8 +5,10 @@ $destructive: #FF4242; //부정적, 오류
 $command : #3385FF; //지시 , 정보 
 
 /* COLOR CHIP */
-$black_2e2e : #2E2E2E;
+$black_2E2E : #2E2E2E;
+$black_2A2A :#2A2A2C;
 $gray_8080 : #808080;
+$gray_5C5C: #5C5C5F;
 $gray_D4D4 : #D4D4D2;
 $gray_E6E6 : #E6E6E6;
 
@@ -20,9 +16,11 @@ $line_2A2A : #2A2A2A;
 
 $green_72DE : #72DE2F;
 $blue_067E: #067EFF;
+$orange_FF9F : #FF9F0A;
+$purple_EEEC: #EEECFF;
 $purple_D1CC : #D1CCFF;
 $purple_D6D3 : #D6D3FB;
-$purple_7779 : #7779E1;
+$purple_7779 : #898BDC; //7779E1
 $purple_9D98 : #9D98FE;
 $purple_5E46 : #5E46E8;
 
@@ -42,13 +40,49 @@ $url : "/assets/images/";
   clip-path: inset(50%); 
   clip: rect(0, 0, 0, 0); 
   clip: rect(0 0 0 0);
-  overflow: hidden; }
+  overflow: hidden; 
+}
+
+
+  
+
+/* =========================================
+  라이트 모드 + 다크 모드
+=========================================== */
+
+
+$light_bgColor: #FFFFFF;
+$light_txtColor_base: #171717;
+$light_txtColor_dominant: #FFFFFF;
+
+$dark_bgColor: #171717;
+$dark_txtColor_base: #FFFFFF;
+$dark_txtColor_dominant: #171717;
+
+$Color_white: #FFFFFF;
+$Color_Black: #171717;
+
+@mixin theme($bgColor, $baseColor, $dominateColor) {
+  background-color: $bgColor;
+  color: $baseColor;
+  color: $dominateColor;
+}
+
+// Light Theme 스타일
+.light--mode {
+  @include theme($light_bgColor, $light_txtColor_base, $light_txtColor_dominant);
+}
+
+// Dark Theme 스타일
+.dark--mode {
+  @include theme($dark_bgColor, $dark_txtColor_base, $dark_txtColor_dominant);
+}
 
 
 
 
-
-  /*  이미지 
+/* ===================================  
+  이미지 
 ==================================== */
 @mixin image($url: null, $position: center center, $size: contain, $repeat: no-repeat) {
   @if $url != null {
@@ -74,4 +108,36 @@ $url : "/assets/images/";
   mask-position: $mask_position;
   -webkit-mask-size: $mask_size;
   mask-size: $mask_size;
+}
+
+
+
+
+
+/* ===================================  
+  common 
+==================================== */
+.list--style {
+  li {
+    position: relative;
+    font-size: 12px; 
+    margin-bottom: 4px;
+    padding-left: 6px;
+    &:after {
+      content: ''; 
+      position: absolute;
+      top: 6px; left: 0;
+      width: 3px; height: 3px;
+      box-sizing: border-box; 
+      background-color: $purple_5E46;
+    }
+  }
+  /* list-style 모양 */
+  &.circl {
+    li {
+      &:after {
+        border-radius: 100%;
+      }
+    }
+  }
 }
