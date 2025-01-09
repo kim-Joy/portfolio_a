@@ -11,7 +11,9 @@ function Main() {
   const handleCalc = () => navigate('/Calc');
   const handleMy = () => navigate('/My');
   const handleMail = () => navigate('/Mail');
-  const handleKakaobank = () => navigate('/KakaoBank')
+  const handleKakaobank = () => navigate('/KakaoBank');
+  const handleSetting = () => navigate('/Setting');
+
   const handleEditodo = () => {
     window.open('https://kim-joy.github.io/editodo/', '_blank')
   };
@@ -47,6 +49,7 @@ function Main() {
           <li>
             <App  
             className="setting"
+            onClick={handleSetting}
             name="설정"
             />
             <App  
@@ -114,6 +117,10 @@ function Main() {
             <App  
               className="skill"
               name="Skill"
+            />
+            <App  
+              className="balance"
+              name="밸런스"
             />
           </li>  
           

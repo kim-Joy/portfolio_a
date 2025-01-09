@@ -10,6 +10,7 @@ import Calc from 'pages/Calc';
 import My from 'pages/My';
 import Mail from 'pages/Mail';
 import KakaoBank from 'pages/KakaoBank';
+import Setting from 'pages/Setting';
 
 import NotFound from "pages/NotFound";
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/My" element={<My/>}></Route>
               <Route path="/Mail" element={<Mail/>}></Route>
               <Route path="/KakaoBank" element={<KakaoBank/>}></Route>
+              <Route path="/Setting" element={<Setting/>}></Route>
              <Route path="/*" element={<NotFound/>}></Route>
             </Route>
           </Routes>
