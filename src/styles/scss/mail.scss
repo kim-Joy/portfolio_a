@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items:center; 
   padding-top: 12px;
-  .mail--title {font-size: 22px; font-weight: 700; color: $baseColor; }
+  .mail--title {font-size: 22px; font-weight: 700; color: var(--txtColor-base); }
   .btn__mail__submit {
     width: 35px; height: 35px;
     background-color: $command;
@@ -16,7 +16,7 @@
 .icon__top {
   display: inline-block;
   width: 30px; height: 30px;
-  background-color: $bgColor;
+  background-color: $color_white;
   @include mask (
     $mask_url : "#{$url}arrow_top.svg",
     $mask_size: auto 16px,
@@ -30,7 +30,7 @@
   flex-direction: row;
   align-items: center;
   gap: 0 8px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--line_2A2A);
   box-sizing: border-box;
   padding-bottom: 6px;
   &:has(.form__textarea) {
@@ -46,7 +46,7 @@
   .form__input {
     width: calc(100% - 110px);
     background-color: transparent;
-    color: $baseColor;
+    color: var(--txtColor-base);
     font-size: 13px; font-weight: 300;
     height: 20px;
   }
@@ -55,7 +55,7 @@
     min-height: 120px; max-height: 300px;
     background-color: transparent;
     overflow-x: hidden; overflow-y: auto;
-    color: $baseColor;
+    color: var(--txtColor-base);
     font-size: 14px; font-weight: 300;
   }
 }

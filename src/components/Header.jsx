@@ -21,14 +21,14 @@ function Header() {
 
       const formatTime = `${String(hours).padStart(2, "0")} : ${String(miuntes).padStart(2, "0")}`;
       const formatDate = `${month}월 ${day}일 ${weekday}`;
-      setTime(formatTime); //시간 업데이트
-      setDate(formatDate); //날짜 업데이트
+      setTime(formatTime); 
+      setDate(formatDate); 
 
     };
 
-    updateDateTime(); //초기화화
+    updateDateTime(); //초기화
     const intervalNow = setInterval(updateDateTime, 1000);
-    return () => clearInterval(intervalNow) //언마운트 
+    return () => clearInterval(intervalNow)
 
   }, []);
 
@@ -52,6 +52,14 @@ function Header() {
           <div className="header__battery">
             <em class="header__batteryPower__percent">90</em>
           </div>
+        </div>
+      </div>
+      <div>
+        <p>요일</p>
+        <strong>시간</strong>
+        <div className="">날씨</div>
+        <div>
+          <p>위로 쓸어올려서 잠금해제</p>
         </div>
       </div>
     </header>

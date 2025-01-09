@@ -13,7 +13,7 @@
     background-color: transparent;
     text-align: right;
     font-size: 30px; font-weight: 400;
-    color: $dominateColor;
+    color: var(--txtColor-base);
   }
 }
 
@@ -57,7 +57,7 @@
   width: 68px;
   border-radius: 100%; 
   background-color: $black_2E2E;
-  color: $Color_white;
+  color: $color_white;
   text-align: center;
   font-size: 27px; font-weight: 500;
   aspect-ratio: 1 / 1;

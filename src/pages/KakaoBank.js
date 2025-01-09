@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "assets/images/kakaobank.svg";
 
-// 카카오뱅크 아이콘
 const symbolon = <img src={Image} className="kakaobank__symbolon" alt="카카오뱅크" />;
 
 // 숫자 목록

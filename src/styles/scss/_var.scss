@@ -1,3 +1,38 @@
+
+/* =========================================
+  라이트 모드 + 다크 모드 CSS
+=========================================== */
+:root {
+  
+}
+
+.light--mode {
+  --bgColor-base: #FFFFFF;
+  --txtColor-base : #171717;
+  --txtColor-dominant : red;
+
+  --line_2A2A : #DEDEDE;
+}
+
+.dark--mode {
+  --bgColor-base: #171717;
+  --txtColor-base : #FFFFFF;
+  --txtColor-dominant : green;
+
+  --line_2A2A : #2A2A2A;
+}
+
+
+
+
+
+/* =========================================
+  SCSS
+=========================================== */
+
+$color_white: #FFFFFF;
+$color_black: #171717;
+
 /* STATUS */
 $positive: #00BF40; //긍정적, 진행, 성공 
 $cautionary: #FF9200; //주의 , 경고
@@ -11,8 +46,6 @@ $gray_8080 : #808080;
 $gray_5C5C: #5C5C5F;
 $gray_D4D4 : #D4D4D2;
 $gray_E6E6 : #E6E6E6;
-
-$line_2A2A : #2A2A2A;
 
 $green_72DE : #72DE2F;
 $blue_067E: #067EFF;
@@ -42,43 +75,6 @@ $url : "/assets/images/";
   clip: rect(0 0 0 0);
   overflow: hidden; 
 }
-
-
-  
-
-/* =========================================
-  라이트 모드 + 다크 모드
-=========================================== */
-
-
-$light_bgColor: #FFFFFF;
-$light_txtColor_base: #171717;
-$light_txtColor_dominant: #FFFFFF;
-
-$dark_bgColor: #171717;
-$dark_txtColor_base: #FFFFFF;
-$dark_txtColor_dominant: #171717;
-
-$Color_white: #FFFFFF;
-$Color_Black: #171717;
-
-@mixin theme($bgColor, $baseColor, $dominateColor) {
-  background-color: $bgColor;
-  color: $baseColor;
-  color: $dominateColor;
-}
-
-// Light Theme 스타일
-.light--mode {
-  @include theme($light_bgColor, $light_txtColor_base, $light_txtColor_dominant);
-}
-
-// Dark Theme 스타일
-.dark--mode {
-  @include theme($dark_bgColor, $dark_txtColor_base, $dark_txtColor_dominant);
-}
-
-
 
 
 /* ===================================  

@@ -73,7 +73,7 @@
   }
   .card__info__title {
     font-size: 24px; font-weight: 500;
-    color: $baseColor;
+    color: var(--txtColor-base);
   }
   .card__info__accent {
     display: block;
@@ -109,7 +109,7 @@
     margin-bottom: 18px;
     .graph__title {
       font-size: 16px;
-      color: $baseColor;
+      color: var(--txtColor-base);
     }
     .graph__percent {
       font-size: 16px;
