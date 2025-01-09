@@ -12,15 +12,15 @@ body {
   layout
 =========================================== */
 .Layout {
-  display: grid; 
-  grid-template-rows: 50px 1fr;
-  height: 100vh;
+  // display: grid; header 영역 제거함
+  // grid-template-rows: 50px 1fr;
+   height: 100vh;
 
  }
 
 main {
   height: 100%;
-  padding: 0 15px; 
+  padding: 20px 15px; 
   box-sizing: border-box;
   > div {height: 100%; } 
 }

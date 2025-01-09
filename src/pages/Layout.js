@@ -6,7 +6,7 @@ import Home from "components/Home";
 
 function Layout() {
   return (
-    <div className="Layout light--mode">
+    <div className="Layout dark--mode">
       <Home />
       <main>
         <Outlet />

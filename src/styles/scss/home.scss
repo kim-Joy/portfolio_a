@@ -2,9 +2,10 @@
   position: absolute;
   top: 0; left: 0; 
   z-index: 100;
-  width: 100%; height: 100%;
+  width: 100%; height: 100vh;
   background-color: $color_black;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
   @include image(
     $url : "#{$url}my_memoji_home.png",
     $size : 210px auto
@@ -51,6 +52,52 @@
   .sliding__txt {
     color: $color_black;
     font-size: 12px; font-weight: 400;
+  }
+}
+
+.home--heartbeat {
+  position: absolute;
+  top: calc(50% + 70px); left: 50%;
+  transform: translate(-50%, -50%);
+  .heart {
+    position: relative;
+    height: 50px; width: 50px;
+    background-color: #4c86df;
+    margin: auto;
+    transform: rotate(-45deg);
+    animation: beat 3s infinite;
+    &:after {
+      content: ''; 
+      position: absolute;
+      top: 0; left: 25px;      
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background-color: #4c86df;
+
+    }
+    &:before {
+      background-color: #4c86df;
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0px;
+    }
+  }
+}
+
+@keyframes beat {
+	0% {
+    transform: scale(1) rotate(-45deg)
+  }
+	50% {
+    transform: scale(0.6) rotate(-45deg);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
