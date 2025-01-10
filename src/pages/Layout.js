@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-import Home from "components/Home";
+import LockScreen from "components/LockScreen";
 
 
 function Layout() {
   return (
-    <div className="Layout dark--mode">
-      <Home />
+    <div className="Layout light--mode">
+      <LockScreen />
       <main>
         <Outlet />
       </main>

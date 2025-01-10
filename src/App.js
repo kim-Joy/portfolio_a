@@ -4,7 +4,7 @@ import 'styles/scss/import.scss';
 
 
 import Layout from 'pages/Layout'
-import Main from 'pages/Main';
+import Home from 'pages/Home';
 import Skill from 'pages/Skill';
 import Calc from 'pages/Calc';
 import My from 'pages/My';
@@ -20,7 +20,7 @@ function App() {
         <BrowserRouter basename= {process.env.PUBLIC_URL} >
           <Routes>
             <Route path="/" element={<Layout/>}>
-              <Route index element={<Main/>}></Route>
+              <Route index element={<Home/>}></Route>
               <Route path="/Calc" element={<Calc/>}></Route>
               <Route path="/Skill" element={<Skill />}></Route>
               <Route path="/My" element={<My/>}></Route>

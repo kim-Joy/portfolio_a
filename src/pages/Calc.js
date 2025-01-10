@@ -32,7 +32,7 @@ const CALC__BTN_FORMULA = [
 function Calc() {
   
   return (
-    <div className="Calc">
+    <div className="calc">
       <div className="calc--viewer">
         <input type="text" value="0" className="calc__input__value" readOnly />
       </div>

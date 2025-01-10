@@ -24,28 +24,20 @@ function StackApp(prop) {
         <ul className="app--list--group stack--list--group">
           <li className="app--group">
             <App  
-                className="yogo"
-                name="요가"
+                className="html"
+                name="80%"
               />
               <App  
-                className="tennis"
-                name="테니스"
+                className="css"
+                name="80%"
               />
               <App  
-                className="mountain"
-                name="등산"
+                className="js"
+                name="60%"
               />
               <App  
-                className="trip"
-                name="독서"
-              />
-              <App  
-                className="blog"
-                name="잠자기"
-              />
-              <App  
-                className="blog"
-                name="잠자기"
+                className="react"
+                name="50%"
               />
           </li>
         </ul>
@@ -54,24 +46,25 @@ function StackApp(prop) {
         <ul className="app--list--group stack--list--group">
           <li className="app--group">
             <App  
-                className="blog"
-                name="블로그"
+                className="figma"
+                name="70%"
               />
               <App  
-                className="SNS"
-                name="도파민"
+                className="ps"
+                name="70%"
               />
               <App  
-                className="blog"
-                name="잠자기"
+                className="ai"
+                name="40%"
               />
               <App  
-                className="blog"
-                name="잠자기"
+                className="github"
+                name="50%"
               />
           </li>
         </ul>
       </SwiperSlide>
+      
     </Swiper>
   );
 }

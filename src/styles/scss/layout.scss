@@ -12,23 +12,23 @@ body {
   layout
 =========================================== */
 .Layout {
-  // display: grid; header 영역 제거함
+   display: grid; //header 영역 제거함
   // grid-template-rows: 50px 1fr;
-   height: 100vh;
-
+  height: 100dvh;
  }
 
 main {
   height: 100%;
   padding: 20px 15px; 
   box-sizing: border-box;
-  > div {height: 100%; } 
 }
 
 /* 배경색 */
 .Layout {
-  background-color: var(--bgColor-base);
-  &:has(.Calc) {
+  :has(.home){
+    background-color: orange;
+  }
+  &:has(.calc) {
     background-color: $color_black; 
   }
   &:has(.kakaobank) {

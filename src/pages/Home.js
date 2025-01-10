@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useDateTime  from "components/StateHook";
 
 import App from 'components/App';
 import StackApp from 'components/StackApp';
-import FaceId from 'components/FaceId';
+import SkillStack from 'components/SkillStack';
 
 
-function Main() {
+
+function Home() {
+  
   const navigate = useNavigate();
   const handleCalc = () => navigate('/Calc');
   const handleMy = () => navigate('/My');
@@ -21,31 +24,21 @@ function Main() {
     window.open('https://kim-joy.github.io/dubuck_2024/', '_blank')
   };
 
-  const [showFaceId, setShowFaceId] = useState(true);
-
-  useEffect(() => {
-    if (!sessionStorage.getItem('faceIdShown')) {
-      const faceLoading = setTimeout(() => {
-        setShowFaceId(false);
-        sessionStorage.setItem('faceIdShown', 'true');
-      }, 3000);
-
-      return () => clearTimeout(faceLoading);
-    } else {
-      setShowFaceId(false);  
-    }
-  }, []);
+  const {day, week } = useDateTime ();
 
   return (
-      <div className="Main">
+      <div className="home">
         <ul className="app--list--group">
           <li className="widget">
             <App  
-              className="my"
-              onClick={handleMy}
-              name="my"
+              className="calendar"
+              name="캘린더"
             />
-          </li>  
+            <div className="calendar__absolute">
+              <p className="calendar__day">{week}</p>
+              <strong className="calendar__dd">{day}</strong>
+            </div>
+          </li>
           <li>
             <App  
             className="setting"
@@ -62,9 +55,9 @@ function Main() {
             name="FaceTime"
             />
             <App  
-              className="maill"
+              className="mail"
               onClick={handleMail}
-              name="Maill"
+              name="mail"
             />
           </li> 
           <li>
@@ -78,7 +71,41 @@ function Main() {
               onClick={handleDubuck}
               name="두벅이"
             />
+             <App  
+              className="canvas"
+              name="그림판"
+            />
           </li>
+          <li className="widget">
+            <App  
+              className="my"
+              onClick={handleMy}
+              name="my"
+            />
+          </li>  
+          <li>
+          <App  
+              className="kakaobank"
+              onClick={handleKakaobank}
+              name="카카오뱅크"
+            />
+            <App  
+              className="balance"
+              name="밸런스"
+            />
+          </li>  
+          <li className="widget">
+            <App  
+              className="todo"
+              name="미리알림"
+            />
+          </li> 
+          <li className="widget column">
+            <App  
+              className="music"
+              name="music"
+            />
+          </li> 
           <li className="app--group">
              <App  
               className="todo"
@@ -92,45 +119,22 @@ function Main() {
             <App  
               className="book"
               name="도서"
-            /><App  
-              className="book"
-              name="도서"
             />
           </li>
-          
-          <li>
-            <App  
-              className="canvas"
-              name="그림판"
-            />
-            <App  
-              className="kakaobank"
-              onClick={handleKakaobank}
-              name="카카오뱅크"
-            />
-          </li> 
+
           <li className="app--stack--group">
             <StackApp />
             <span className="stack--name">취미</span>
           </li> 
-          <li>
-            <App  
-              className="skill"
-              name="Skill"
-            />
-            <App  
-              className="balance"
-              name="밸런스"
-            />
-          </li>  
-          
+          <li className="app--stack--group column">
+            <SkillStack />
+            <span className="stack--name">skill</span>
+          </li> 
         </ul> 
-
-        {showFaceId &&  <FaceId /> }
       </div>
 
   )
 } 
 
 
-export default Main;
+export default Home;
