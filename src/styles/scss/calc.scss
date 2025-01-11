@@ -1,4 +1,10 @@
-
+.calc {
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  height: 100%;
+  grid-template-rows: 2fr 1fr;
+}
 .calc--viewer {
   display: grid;
   align-items: start;
@@ -12,7 +18,7 @@
     box-sizing: border-box;
     background-color: transparent;
     text-align: right;
-    font-size: 30px; font-weight: 400;
+    font-size: 30px; 
     color: $color_white;
   }
 }
@@ -59,7 +65,7 @@
   background-color: $black_2E2E;
   color: $color_white;
   text-align: center;
-  font-size: 27px; font-weight: 500;
+  font-size: 27px; font-weight: var(--font_weight600);
   aspect-ratio: 1 / 1;
   &.operations {
     background-color: $orange_FF9F;

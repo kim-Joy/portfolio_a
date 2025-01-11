@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import useDateTime  from "components/StateHook";
+import useDateTime  from "usestate/useDateTime";
 
 function LockScreen() {
   const {time, date } = useDateTime ();

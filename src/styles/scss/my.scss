@@ -54,11 +54,11 @@
   gap: 4px 4px;
   margin-bottom: 30px;
   .card__type {
-    font-size: 32px; font-weight: 700; 
+    font-size: 32px; font-weight: var(--font_weight700); 
     color: $purple_9D98; 
   }
   .card__summary {
-    font-size: 16px; font-weight: 400; 
+    font-size: 16px; font-weight: var(--font_weight400);  
     color: $purple_5E46;
   }
 }
@@ -72,13 +72,13 @@
 
   }
   .card__info__title {
-    font-size: 24px; font-weight: 500;
+    font-size: 24px; font-weight: var(--font_weight500); 
     color: var(--txtColor-base);
   }
   .card__info__accent {
     display: block;
     margin-top: 18px;
-    font-size: 24px; font-weight: 500;
+    font-size: 24px; font-weight: var(--font_weight500); 
     color: $purple_5E46;
   }
 }
@@ -108,11 +108,11 @@
     gap: 0 8px;
     margin-bottom: 18px;
     .graph__title {
-      font-size: 16px;
+      font-size: 16px; font-weight: var(--font_weight500);
       color: var(--txtColor-base);
     }
     .graph__percent {
-      font-size: 16px;
+      font-size: 16px; font-weight: var(--font_weight500);
       color: $purple_5E46;
     }
   }
@@ -160,7 +160,7 @@
 .my--manual {
   .manual--title {
     color: $purple_5E46;
-    font-size: 16px; font-weight: 500;
+    font-size: 16px; font-weight: var(--font_weight500);
     margin-bottom: 8px;
   }
   .manual--list {
@@ -169,7 +169,7 @@
     padding: 28px 28px;
     box-sizing: border-box;
     > li {
-      font-size: 14px; font-weight: 400;
+      font-size: 14px; font-weight: var(--font_weight400);
       color: $purple_5E46;
     }
   }

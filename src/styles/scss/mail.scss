@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items:center; 
   padding-top: 12px;
-  .mail--title {font-size: 22px; font-weight: 700; color: var(--txtColor-base); }
+  .mail--title {font-size: 22px; font-weight: var(--font_weight700); color: var(--txtColor-base); }
   .btn__mail__submit {
     width: 35px; height: 35px;
     background-color: $command;
@@ -40,14 +40,14 @@
     color: $gray_8080;
     font: {
       size: 13px;
-      weight: 300;
+      weight: var(--font_weight300);
     }
   }
   .form__input {
     width: calc(100% - 110px);
     background-color: transparent;
     color: var(--txtColor-base);
-    font-size: 13px; font-weight: 300;
+    font-size: 13px; font-weight: var(--font_weight300);
     height: 20px;
   }
   .form__textarea {
@@ -56,7 +56,7 @@
     background-color: transparent;
     overflow-x: hidden; overflow-y: auto;
     color: var(--txtColor-base);
-    font-size: 14px; font-weight: 300;
+    font-size: 14px; font-weight: var(--font_weight300);
   }
 }
 

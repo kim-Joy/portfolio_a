@@ -5,6 +5,29 @@ body {
   weight: 400;
   size: 16px;
   }
+  &.font--setting {
+    &--01 {
+      font-size: 12px;
+    }
+    &--02 {
+      font-size: 14px;
+    }
+    &--03 {
+      font-size: 16px;
+    }
+    &--04 {
+      font-size: 18px;
+    }
+    &--05 {
+      font-size: 20px;
+    }
+    &--06 {
+      font-size: 22px;
+    }
+  }
+  &.font--weight {
+    font-weight: 700; 
+  }
 }
 
 
@@ -12,7 +35,8 @@ body {
   layout
 =========================================== */
 .Layout {
-   display: grid; //header 영역 제거함
+  position: relative;
+  //display: grid; //header 영역 제거함
   // grid-template-rows: 50px 1fr;
   height: 100dvh;
  }
@@ -25,6 +49,7 @@ main {
 
 /* 배경색 */
 .Layout {
+  background-color: var(--bgColor-base);
   :has(.home){
     background-color: orange;
   }
@@ -36,6 +61,34 @@ main {
     background-color: var(--bgColor-base); 
   }
 }
+
+
+/* =======================================
+  시스템 모드
+==========================================*/
+@media (prefers-color-scheme: light) {
+  .light--mode {
+    --bgColor-base: #FFFFFF;
+    --bgColor-dominant: #F1F1F1;
+    --txtColor-base : #171717;
+    --txtColor-dominant : red;
+
+    --line_2A2A : #DEDEDE;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .dark--mode {
+    --bgColor-base: #171717;
+  --bgColor-dominant: #1F1F1F;
+  --txtColor-base : #FFFFFF;
+  --txtColor-dominant : green;
+
+  --line_2A2A : #2A2A2A;
+    
+  }
+}
+
 
 
 /* =======================================

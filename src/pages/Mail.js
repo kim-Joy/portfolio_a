@@ -21,7 +21,7 @@ const Mail = () => {
   };
 
   return (
-    <div className="Mail">
+    <div className="mail">
       <form ref={form} onSubmit={sendEmail}>
         <div className="form--header">
           <h3 className="mail--title">새로운 메시지</h3>

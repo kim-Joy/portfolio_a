@@ -39,43 +39,7 @@ function useDateTime() {
   return { time, date, month, day, week };
 }
 
-function useTheme(){
-  const [defaultTheme, setDefaultTheme] = useState("theme_light");
-
-  const radioHandleThemeChange = (e) => {
-    setDefaultTheme(e.target.value)
-  };
-  return {defaultTheme , radioHandleThemeChange};
-}
 
 export default useDateTime;
-
-
-// 취미 관련 데이터
-export const hobbyData = [
-  [
-    { className: "yogo", name: "요가" },
-    { className: "tennis", name: "테니스" },
-    { className: "mountain", name: "등산" },
-    { className: "trip", name: "독서" },
-  ],
-  [
-    { className: "blog", name: "블로그" },
-    { className: "sleep", name: "잠자기" },
-  ],
-];
-
-// 스킬 관련 데이터
-export const skillData = [
-  [
-    { className: "html", name: "HTML" },
-    { className: "css", name: "CSS" },
-    { className: "js", name: "JavaScript" },
-  ],
-  [
-    { className: "react", name: "React" },
-    { className: "figma", name: "Figma" },
-  ],
-];
 
 

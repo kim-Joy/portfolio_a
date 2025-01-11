@@ -4,19 +4,19 @@
 .pattern--error-group {
   text-align: center; 
   .error__text {
-    font-size: 14px; font-weight: 400;
+    font-size: 14px;
     color: var(--txtColor-base);
   }
   .error__destructive {
     display: inline-block;
     color: $destructive;
-    font-size: 12px; font-weight: 300;
+    font-size: 12px;
   }
   .pattern--error__num {
     display: inline-block;
     margin-left: 4px;
     color: $destructive;
-    font-size: 12px; font-weight: 300;
+    font-size: 12px;
     vertical-align: middle;
 
   }

@@ -3,25 +3,47 @@
   라이트 모드 + 다크 모드 CSS
 =========================================== */
 :root {
+  --font_weight300 : 300;
+  --font_weight400 : 400;
+  --font_weight500 : 500;
+  --font_weight600 : 600;
+  --font_weight700 : 700;
+  --font_weight800 : 800;
+  --font_weight900 : 900;
   
 }
 
 .light--mode {
   --bgColor-base: #FFFFFF;
+  --bgColor-dominant: #F1F1F1;
   --txtColor-base : #171717;
   --txtColor-dominant : red;
 
   --line_2A2A : #DEDEDE;
+  &:has(.setting) {
+    --bgColor-base: #F1F1F1;
+    --bgColor-dominant: #FFFFFF;
+  }
 }
 
 .dark--mode {
   --bgColor-base: #171717;
+  --bgColor-dominant: #1F1F1F;
   --txtColor-base : #FFFFFF;
   --txtColor-dominant : green;
 
   --line_2A2A : #2A2A2A;
 }
 
+.font--weight {
+  --font_weight300 : 500;
+  --font_weight400 : 600;
+  --font_weight500 : 700;
+  --font_weight600 : 800;
+  --font_weight700 : 900;
+  --font_weight800 : 900;
+  --font_weight900 : 900;
+}
 
 
 
@@ -135,5 +157,62 @@ $url : "/assets/images/";
         border-radius: 100%;
       }
     }
+  }
+}
+
+
+
+
+/* ===================================  
+  form 
+==================================== */
+.radio__label {
+  position: relative;
+  &:has(:checked):after {
+    background-color: $command;
+  }
+  .radio__input {
+    position: absolute; 
+    width: 1px; height: 1px; 
+    padding: 0; border: none;
+    clip-path: inset(100%); clip: rect(0,0,0,0); 
+    overflow: hidden;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    width: 16px; height: 16px;
+    border-radius: 100%;
+    background-color: var(--bgColor-base);
+    border: 1px solid var( --line_2A2A);
+    box-sizing: border-box;
+
+    transform: translateX(-50%);
+  }
+}
+
+
+/* 스위치 버튼 */
+.switch__box {
+  position: relative;
+  display: block;
+  width: 50px; height: 28px;
+  background-color: var(--bgColor-base);
+  box-sizing: border-box;
+  border-radius: 30px;
+
+  &.on {
+    .switch__ball {    
+      transform: translateX(20px);
+    }
+  }
+  .switch__ball {
+    position: absolute;
+    top: 3px; left: 4px;
+    width: 22px; height: 22px;
+    border-radius: 100%;
+    background-color: $color_white;
+    transition: 0.8s;
   }
 }
